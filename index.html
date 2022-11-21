@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- External Javascript libs_ext  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"
+            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js"
+            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+            crossorigin="anonymous"></script>
+
+
+    <!-- Library libs_ext -->
+    <script src="static/js/libs_ext/typeahead.bundle.js"></script>
+
+
+    <!--    Internal Libs -->
+    <script src="static/js/data/api.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY="
+          crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+            href="static/css/Lato.css"
+            rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet"/>
+    <link
+            href="static/css/Cuprum.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/main.css"/>
+<!--    <link rel="stylesheet" href="static/css/fa_regular.css"/>-->
+    <link rel="stylesheet" href="static/css/fa_solid.css"/>
+    <link rel="stylesheet" href="static/css/lazy_load.css"/>
+    <link rel="stylesheet" href="static/css/typeahead.css"/>
+
+    <title>AKBC 2022</title>
+    
+</head>
+
+<body>
+<!-- NAV -->
+
+<!--('chat.html', 'Chat'),-->
+<!--('https://app.gather.town/app/1VbvLWiUdpTxkTgV/AKBC%202022', 'GatherTown'),-->
+<nav
+        class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto"
+        id="main-nav"
+>
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img
+                    class="logo" src="static/images/logo_notext.png"
+                    height="auto"
+            width="35px"
+            />
+        </a>
+        
+        <a class="navbar-brand" href="index.html">AKBC 2022</a>
+        
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+                class="collapse navbar-collapse text-right flex-grow-1"
+                id="navbarNav"
+        >
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="schedule.html">Schedule</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="papers.html">Papers</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="workshops.html">Workshops</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- User Overrides -->
+
+<style>
+  .back {
+    background: url("static/images/London-AKBC-up-partial.png") no-repeat center;
+    background-size: cover;
+  }
+  .back h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+  }
+</style>
+
+<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
+  <div class="row header p-6 m-5">
+    <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
+      <h2>
+        AKBC 2022 <br> Automated Knowledge Base Construction
+      </h2>
+      <h2 class="p-5">
+        3-5 November 2022
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+    <!-- Tabs -->
+    <div class="tabs">
+         
+    </div>
+    <!-- Content -->
+    <div class="content">
+        
+
+<h2>AKBC 2022</h2>
+<p>Welcome to the 4th Conference on Automated Knowledge Base Construction!</p>
+<h3>In-person format</h3>
+<p>The conference is taking place in-person at <a href="https://www.barbican.org.uk/">the Barbican Centre</a>, November 3-5 2022 (Thursday-Saturday).</p>
+<p>There will be two days (3-4 Nov) of invited talks and paper presentations. More information in the <a href="schedule.html">Schedule</a>.</p>
+<p>On Nov 3rd (Thursday) there will be an online poster session in Gather Town. You are encouraged to also participate on-site using your own device.</p>
+<p>On Nov 4th (Friday) there will be an in-person poster session, along with a social event in the evening.</p>
+<p>On Nov 5th (Saturday) the day will be dedicated to the workshops.</p>
+<p>Head over to the <a href="schedule.html">Schedule</a> to see the times and locations for each session.</p>
+<h3>Online format</h3>
+<p>The conference will be hybrid and can also be followed online. </p>
+<p>The paper presentations and invited talks will be streamed live using <a href="https://zoom.us/">Zoom</a>. The talks will be recorded and the videos will be made available later.</p>
+<p>You can watch the live stream by joining the Zoom session and also ask questions from the speakers using the Zoom QA system.</p>
+<p>The papers and posters can be found under the entries for each paper at the <a href="papers.html">Papers</a> page. Every paper also has a dedicated <a href="https://www.rocket.chat/">RocketChat</a> channel -- we encourage you to ask questions and connect with the authors there. There is also a <a href="chat.html">general chat room</a> for the whole conference.</p>
+<p>The online poster on Nov 3rd will take place on Gather Town. Once you connect, you will be able to move around in a virtual environment and interact with the posters and presenters there.</p>
+<p>Head over to the <a href="schedule.html">Schedule</a> to find the correct links for each session.</p>
+<h3>Further help</h3>
+<p>If you have any questions, email us at <a href="mailto:info@akbc.ws">info@akbc.ws</a> or write on the <a href="chat.html">chat</a>.</p>
+<h3>Acknowledgements</h3>
+<p>This site was adapted from <a href="http://www.mini-conf.org/">MiniConf</a> by <a href="http://www.marekrei.com/">Marek Rei</a>. MiniConf was built by <a href="http://twitter.com/hen_str">Hendrik Strobelt</a> and <a href="http://twitter.com/srush_nlp">Sasha Rush</a>.</p>
+
+<!-- Organizers -->
+<div class="border-top my-3"></div>
+<div class="row p-4" id="faq">
+  <div class="col-12 bd-content">
+    <h2 class="text-center">Organizers</h2>
+  </div>
+</div>
+<div class="row">
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">
+            
+            <a href="https://www.riedelcastro.org/">
+            
+                Sebastian Riedel
+            
+            </a>
+            
+        </h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            General Chair
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            UCL, FAIR /
+            <a class="text-muted" href="http://twitter.com/riedelcastro"
+              >@riedelcastro</a
+            >
+          </h6>
+        </div>
+        <center>
+            
+            <a href="https://www.riedelcastro.org/">
+            
+            <img src="static/images/sebastian_riedel.jpg" class="rounded" style="height: 200px;" />
+            
+            </a>
+            
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">
+            
+            <a href="https://www.cs.utexas.edu/~eunsol/">
+            
+                Eunsol Choi
+            
+            </a>
+            
+        </h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Program Co-Chair
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            UT Austin, Google AI /
+            <a class="text-muted" href="http://twitter.com/eunsolc"
+              >@eunsolc</a
+            >
+          </h6>
+        </div>
+        <center>
+            
+            <a href="https://www.cs.utexas.edu/~eunsol/">
+            
+            <img src="static/images/eunsol_choi.jpg" class="rounded" style="height: 200px;" />
+            
+            </a>
+            
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">
+            
+            <a href="http://andreasvlachos.github.io/">
+            
+                Andreas Vlachos
+            
+            </a>
+            
+        </h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Program Co-Chair
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            University of Cambridge /
+            <a class="text-muted" href="http://twitter.com/vlachos_nlp"
+              >@vlachos_nlp</a
+            >
+          </h6>
+        </div>
+        <center>
+            
+            <a href="http://andreasvlachos.github.io/">
+            
+            <img src="static/images/andreas_vlachos.jpg" class="rounded" style="height: 200px;" />
+            
+            </a>
+            
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">
+            
+            <a href="https://jamesthorne.com/">
+            
+                James Thorne
+            
+            </a>
+            
+        </h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Workshop Chair
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            KAIST AI /
+            <a class="text-muted" href="http://twitter.com/j6mes"
+              >@j6mes</a
+            >
+          </h6>
+        </div>
+        <center>
+            
+            <a href="https://jamesthorne.com/">
+            
+            <img src="static/images/james_thorne.jpg" class="rounded" style="height: 200px;" />
+            
+            </a>
+            
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">
+            
+            <a href="https://www.marekrei.com/">
+            
+                Marek Rei
+            
+            </a>
+            
+        </h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Virtual Platform Chair
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Imperial College London /
+            <a class="text-muted" href="http://twitter.com/marekrei"
+              >@marekrei</a
+            >
+          </h6>
+        </div>
+        <center>
+            
+            <a href="https://www.marekrei.com/">
+            
+            <img src="static/images/marek_rei.png" class="rounded" style="height: 200px;" />
+            
+            </a>
+            
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">
+            
+            <a href="https://www.fabiopetroni.com/">
+            
+                Fabio Petroni
+            
+            </a>
+            
+        </h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Local Chair
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Facebook AI Research /
+            <a class="text-muted" href="http://twitter.com/Fabio_Petroni"
+              >@Fabio_Petroni</a
+            >
+          </h6>
+        </div>
+        <center>
+            
+            <a href="https://www.fabiopetroni.com/">
+            
+            <img src="static/images/fabio_petroni.jpg" class="rounded" style="height: 200px;" />
+            
+            </a>
+            
+        </center>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+    </div>
+</div>
+
+
+
+<!-- Google Analytics -->
+<script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "UA-");
+</script>
+
+<!-- Footer -->
+<footer class="footer bg-light p-4">
+    <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2022 AKBC Organization Committee</p>
+    </div>
+</footer>
+
+<!-- Code for hash tags -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    if (window.location.hash !== "") {
+      $(`a[href="${window.location.hash}"]`).tab("show");
+    }
+
+    $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+      const hash = $(e.target).attr("href");
+      if (hash.substr(0, 1) === "#") {
+        const position = $(window).scrollTop();
+        window.location.replace(`#${hash.substr(1)}`);
+        $(window).scrollTop(position);
+      }
+    });
+  });
+</script>
+<!--    <script src="static/js/modules/lazyLoad.js"></script>-->
+
+</body>
+</html>
